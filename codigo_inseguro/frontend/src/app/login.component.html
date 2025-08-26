@@ -1,0 +1,36 @@
+<div class="login-container">
+
+
+  <mat-card class="login-card">
+    <h2 class="title">Login</h2>
+    <mat-card-content>
+        <!-- tu formulario aquí -->
+        <form>
+            <!-- Usuario -->
+            <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Usuario</mat-label>
+            <input matInput placeholder="Ingrese su usuario" [(ngModel)]="username" name="username">
+            </mat-form-field>
+
+            <!-- Contraseña -->
+            <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Contraseña</mat-label>
+            <input matInput placeholder="Ingrese su contraseña" [(ngModel)]="password" name="password" type="password">
+            </mat-form-field>
+
+            <!-- Botón -->
+            <button mat-raised-button color="primary" class="full-width" (click)="submit()">
+            Entrar
+            </button>
+
+            <!-- Error (❌ inseguro, posible XSS) -->
+            <div class="error" [innerHTML]="error"></div>
+
+            <!-- Registro -->
+            <div class="register-link">
+            <a routerLink="/register">Registrarse</a>
+            </div>
+        </form>
+    </mat-card-content>
+  </mat-card>
+</div>

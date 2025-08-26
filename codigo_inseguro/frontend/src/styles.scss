@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+//body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  background: url('../assets/fondo-boda.jpg') no-repeat center center fixed;
+  background-size: cover; /* que la imagen se ajuste */
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,60 @@
+.guests-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #4caf50; /* Verde elegante */
+}
+
+.guest-form-card,
+.guest-table-card {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th.mat-header-cell {
+  font-weight: bold;
+  background: #f1f1f1;
+}
+
+
+.panel {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: lightslategray;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+select, button {
+  width: 100%;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
