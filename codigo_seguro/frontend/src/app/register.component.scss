@@ -1,0 +1,48 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 50px;
+  padding-left: 12vw;
+  width: 25vw;
+  margin: 5vh;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #e91e63; /* tono rosa para diferenciar del login */
+}
+
+.register-card {
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+
+
+.full-width {
+  width: 80%;        /* deja un poco de espacio a los lados */
+  max-width: 400px;  /* no se hace demasiado grande */
+  margin-bottom: 15px;
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.back-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: #3f51b5;
+  font-weight: 500;
+}

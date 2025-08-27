@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from './api.service';
-import { AuthService } from './auth.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -12,10 +11,10 @@ import { MatCardModule } from '@angular/material/card';
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   standalone: true,
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss',
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.scss',
   imports: [
     CommonModule,
     FormsModule, 
@@ -24,15 +23,16 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule, 
     MatCardModule
   ]
+
 })
-export class LoginComponent {
-    username = ''; password = '';
-    error = '';
-    constructor(private api: ApiService, private auth: AuthService, private router: Router) {}
-    submit(){
-    this.api.login(this.username, this.password).subscribe({
-    next: (r) => { this.auth.setToken(r.token); this.router.navigateByUrl('/guests'); },
-    error: (e) => this.error = JSON.stringify(e) // ❌ muestra errores crudos
-    });
-    }
+export class RegisterComponent {
+username = ''; password = '';
+error = '';
+constructor(private api: ApiService, private router: Router) {}
+submit(){
+this.api.register(this.username, this.password).subscribe({
+next: () => this.router.navigateByUrl('/'),
+error: (e) => this.error = JSON.stringify(e) // ❌ muestra errores crudos
+});
+}
 }

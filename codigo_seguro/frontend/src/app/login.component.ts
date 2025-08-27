@@ -26,13 +26,13 @@ import { MatCardModule } from '@angular/material/card';
   ]
 })
 export class LoginComponent {
-    username = ''; password = '';
-    error = '';
-    constructor(private api: ApiService, private auth: AuthService, private router: Router) {}
-    submit(){
-    this.api.login(this.username, this.password).subscribe({
-    next: (r) => { this.auth.setToken(r.token); this.router.navigateByUrl('/guests'); },
-    error: (e) => this.error = JSON.stringify(e) // ❌ muestra errores crudos
-    });
-    }
+username = ''; password = '';
+error = '';
+constructor(private api: ApiService, private auth: AuthService, private router: Router) {}
+submit(){
+this.api.login(this.username, this.password).subscribe({
+next: (r) => { this.auth.setToken(r.token); this.router.navigateByUrl('/guests'); },
+error: (e) => this.error = JSON.stringify(e) // ❌ muestra errores crudos
+});
+}
 }
